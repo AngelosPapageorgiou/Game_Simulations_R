@@ -1,0 +1,104 @@
+#Game Simulation with plot 
+simulate_game=function(n){	
+  win_1=0
+  win_2=0
+  k=0
+  
+  for(k in 1:n){
+    i=0 #Player's 1 position
+    j=0 #Player's 2 position
+    
+    while(i<50 & j<50){
+      prev_j=j
+      #Player 1 rolls the dice
+      
+      z1=sample(1:6,1)
+      
+      if(z1%%2!=0){
+        i=i+z1
+      }
+      else{
+        i=i+2
+      }
+      if(z1%%5==0){
+        i=0
+      }
+      if(i==prev_j){
+        z3=sample(1:6,1)
+        if(z3%%2!=0){
+          i=i+z3
+        }
+        else{
+          i=i+2
+        }
+        if(z3%%5==0){
+          i=0
+        }
+      }
+      if(i>=50){
+        print("Player 1 won")
+        win_1=win_1+1
+        break
+      }
+      
+      prev_i=i
+      
+      #Player 2 rolls the dice
+      
+      z2=sample(1:6,1)
+      
+      if(z2%%2!=0){
+        j=j+z2
+      }
+      else{
+        j=j+2
+      }
+      if(z2%%5==0){
+        j=0
+      }
+      if(j==prev_i){
+        z4=sample(1:6,1)
+        if(z4%%2!=0){
+          j=j+z4
+        }
+        else{
+          j=j+2
+        }
+        if(z4%%5==0){
+          j=0
+        }
+      }
+      if(j>=50){
+        print("Player 2 won")
+        win_2=win_2+1
+        break
+}
+}
+}
+cat("player 1 won",win_1,"times\n")
+cat("player 2 won",win_2,"times\n")
+cat("player's 1 win percentage is",win_1/n*100,"%\n")
+cat("player's 2 win percentage is",win_2/n*100,"%\n")
+
+
+library(ggplot2)
+# Create data frame
+plot_data <- data.frame(
+  Player = c("Player 1", "Player 2"),
+  Wins = c(win_1, win_2),
+  Percentage = c(win_1/n*100, win_2/n*100)
+)
+library(ggplot2)
+
+ggplot(plot_data, aes(x = Player, y = Wins, fill = Player)) +
+  geom_col() +
+  geom_text(aes(label = paste0(Wins, " (", Percentage, "%)")), vjust = -0.5) +
+  labs(title = "Game Results",
+       x = "Player",
+       y = "Number of Wins") +
+  theme_minimal()
+
+}
+
+
+
