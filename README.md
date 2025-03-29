@@ -7,15 +7,9 @@ Repository Owner: [Angelos Papageorgiou] | Statistics Student @ AUEB (Athens Uni
 
 This repository contains R-based simulations and exercises from my university courses, focusing on:
 
-Probability & Statistics: Simulations of games (dice, cards, etc.) to demonstrate statistical concepts.
+Probability & Statistics: Simulations of games to demonstrate statistical concepts.
 
-Game Theory: Strategic interactions (Nash equilibrium, auctions, Prisoner’s Dilemma).
-
-Stochastic Processes: Markov chains, random walks, and Monte Carlo methods.
-
-Data Visualization: Using ggplot2, plotly, or Shiny apps to analyze outcomes.
-
-🎯 Purpose
+# Purpose
 Practice and document my coursework in R programming and statistical modeling.
 
 Share reusable code for fellow students or educators.
