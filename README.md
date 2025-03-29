@@ -1,17 +1,19 @@
-📊 R Game Simulations Exercises
+# 🎲 Dice Game Simulation - Probability & Statistics Assignment  
 
-![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)
-![AUEB](https://img.shields.io/badge/AUEB-CC0000?style=for-the-badge&logo=university&logoColor=white)
+![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white) 
+![AUEB](https://img.shields.io/badge/AUEB-CC0000?style=for-the-badge&logo=university&logoColor=white)  
 
-Repository Owner: [Angelos Papageorgiou] | Statistics Student @ AUEB (Athens University of Economics and Business)
+Course: Introduction to Probability and Statistics with R @ [AUEB](https://www.aueb.gr)  
 
-This repository contains R-based simulations and exercises from my university courses, focusing on:
+This branch contains my assignment submission for a dice game simulation, implementing probabilistic concepts in R.
 
-Probability & Statistics: Simulations of games to demonstrate statistical concepts.
+## 📝 Assignment Overview
+Objective : Simulate a dice game to analyze:  
+- Probability distributions of outcomes  
+- Convergence of empirical vs theoretical probabilities  
+- Statistical properties (mean, variance)  
 
-# Purpose
-Practice and document my coursework in R programming and statistical modeling.
-
-Share reusable code for fellow students or educators.
-
-Visualize theoretical concepts through interactive examples.
+Files included:  
+- Dice_Game_Simulation.txt (Code)
+- Instructions_Dice_Game.pdf (Instructions)
+- Results_analysis.Rmd: (Plot : Wins and Win Percentage) 
